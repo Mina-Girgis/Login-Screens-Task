@@ -1,0 +1,130 @@
+import 'package:flutter/material.dart';
+
+void main() {
+    runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home:Scaffold(
+        backgroundColor: Colors.blue[900],
+        body:Center(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(20.0, 60.0, 20.0, 10.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  'Logo',
+                   style:TextStyle(
+                     color: Colors.white,
+                     fontSize: 50.0,
+                     fontWeight: FontWeight.bold,
+                   ),
+                ),
+
+
+                SizedBox(height: 50.0,),
+
+
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(30, 10, 30,0),
+                  child: TextField(
+
+                      decoration: InputDecoration(
+                        fillColor: Colors.blue[850], filled: true,
+                        prefixIcon: Padding(
+                          padding: const EdgeInsets.fromLTRB(10.0, 0, 20.0,0),
+                          child: Icon(
+                              IconData(0xe043, fontFamily: 'MaterialIcons'),
+                              size: 50.0,
+
+                          ),
+                        ),
+                        labelText: 'Username',
+                        labelStyle: TextStyle(
+                          fontSize: 25.0,
+                          color: Colors.white,
+                        ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(40.0),
+                        ),
+                      ),
+
+                  ),
+
+
+                ),
+                SizedBox(height: 25.0,),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(30, 10, 30,0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                        fillColor: Colors.blue[850], filled: true,
+                      prefixIcon: Padding(
+                        padding: const EdgeInsets.fromLTRB(10.0, 0, 20.0,0),
+                        child: Icon(
+                          Icons.lock,
+                          size: 50.0,
+
+                        ),
+                      ),
+                      labelText: 'Password',
+                      labelStyle: TextStyle(
+                        fontSize: 25.0,
+                        color: Colors.white,
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(40.0),
+                      )
+                    ),
+
+                  ),
+                ),
+
+                TextButton(
+                    onPressed: (){},
+                    child: Text(
+                        'Forget Password ?',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                    ),
+                ),
+                SizedBox(height: 20.0,),
+                ButtonTheme(
+                    height: 50,
+                    minWidth: 300.0,
+                    child: RaisedButton(
+                      onPressed: (){},
+                      child: Text('Log in'),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(40),
+                    ),
+                ),
+                ),
+                SizedBox(height: 15.0,),
+                ButtonTheme(
+                  height: 50,
+                  minWidth: 300.0,
+                  child: FlatButton(
+                    onPressed: (){},
+                    child: Text('Sign Up'),
+                    color: Colors.transparent,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(40),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
